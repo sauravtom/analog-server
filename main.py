@@ -1,19 +1,21 @@
+import flask
+from datetime import datetime
 
-m gcm import GCM
+app = flask.Flask(__name__)
+app.secret_key = 'justsomerandomstring001'
+app.config['SESSION_TYPE'] = 'filesystem'
 
-gcm = GCM(API_KEY)
-data = {'param1': 'value1', 'param2': 'value2'}
 
-# Plaintext request
-reg_id = '12'
-gcm.plaintext_request(registration_id=reg_id, data=data)
+@app.route('/')
+def index():
+    #print datetime.now().ctime().
+    return flask.render_template('homepage.html')
 
-# JSON request
-reg_ids = ['12', '34', '69']
-response = gcm.json_request(registration_ids=reg_ids, data=data)
+@app.route('/api')
+def foo():
+    return "hello world"
 
-# Extra arguments
-res = gcm.json_request(
-    registration_ids=reg_ids, data=data,
-    collapse_key='uptoyou', delay_while_idle=True, time_to_live=3600
-)
+
+if __name__ == '__main__':
+    app.debug = True
+    app.run(host='0.0.0.0', port=8000)
