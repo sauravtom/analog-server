@@ -7,6 +7,7 @@ from gcm.gcm import GCMException
 from settings import *
 from decorator import *
 from flask_cors import CORS
+from bot_response import *
 
 app = flask.Flask(__name__)
 cors = CORS(app, resources={r"/message": {"origins": ""}})
@@ -44,8 +45,7 @@ def index():
 def message_input():
     msg = request.args.get('msg')
     print msg
-    return "Hey Buddy!"
-
+    return sentiment(msg)
 
 if __name__ == '__main__':
     app.debug = True
