@@ -79,7 +79,6 @@ def login():
     return flask.render_template('login.html')
 
 @app.route('/chat')
-@login_required
 def chat():
     return flask.render_template('chat.html')
 
@@ -88,7 +87,8 @@ def chat():
 @crossdomain(origin='*')
 def message_input():
     msg = request.args.get('msg')
-    print msg
+    if len(msg)<3:
+        return "??"
     return sentiment(msg)
 
 @app.route('/logout')

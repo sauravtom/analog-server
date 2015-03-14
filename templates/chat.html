@@ -6,17 +6,21 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="static/css/style.css">
     <style type="text/css">
-      html{
-        width:100%;
-        height:100%;
+      html,body{
+        //width:100%;
+        //height:100%;
+        //min-width:200px;
+        max-width: 100%;
+        overflow-x: hidden;
       }
-      body{
-        width:100%;
-      }
+      
       .commentArea {
-          font: 14px Arial;
+          font: 20px Arial;
           padding: 0 10px;
-          margin-top: 20px;    
+          margin-top: 20px;
+          overflow-x: hidden;
+          overflow-y: hidden;
+          min-width:50px;
       }
 
       .bubbledLeft,.bubbledRight {
@@ -76,22 +80,30 @@
         left:0px;
         right:0px;
         width:100%;
-        height:40px;
+        height:60px;
+        border:2px solid;
+        font: 23px Arial;
       }
-      #send{
-        padding:1px;
+      .header{
+        //height:30px;
+        width:100%;
+        background: orange;
+        text-align: center;
+        padding:10px;
+        //padding-bottom: 10px;
+        font-weight: bolder;
+        font-size: 25px;
       }
+      
+
     </style>
 </head>
 <body>
+  <div class="header">Analog</div>
 
-  <div class="commentArea">
-      <div class="bubbledLeft">
-          Type a message to talk to me.
-      </div>
-  </div>   
+  <div class="commentArea"></div>
 
-  <input id="msg" style="font-size:20px" type="text">
+  <input id="msg" type="text">
   
   
 
