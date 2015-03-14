@@ -6,6 +6,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="static/css/style.css">
     <style type="text/css">
+      html{
+        width:100%;
+        height:100%;
+      }
+      body{
+        width:100%;
+      }
       .commentArea {
           font: 14px Arial;
           padding: 0 10px;
@@ -63,22 +70,30 @@
           content: "";
       }
 
-
+      #msg{
+        position: fixed;
+        bottom:0px;
+        left:0px;
+        right:0px;
+        width:100%;
+        height:40px;
+      }
+      #send{
+        padding:1px;
+      }
     </style>
 </head>
 <body>
 
   <div class="commentArea">
-      <div class="bubbledRight">
-          Error dicunt theophrastus cu qui. Ad eos simul possit option, adipisci principes sed at. Detracto adolescens pro ea, duo no
-      </div>
       <div class="bubbledLeft">
-          Lorem ipsum dolor sit amet, ea oblique constituam signiferumque eam. Pri adipisci maluisset te.
+          Type a message to talk to me.
       </div>
   </div>   
 
-  <button id="send"></button>
   <input id="msg">
+  
+  
 
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
