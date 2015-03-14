@@ -1,6 +1,5 @@
 import flask
 from flask import request
-from redis import Redis
 from datetime import datetime
 from gcm import GCM
 from gcm.gcm import GCMException
@@ -32,12 +31,16 @@ def gmc_send():
 
 
 @app.route('/')
-def index():
+def login():
     currTime = datetime.now().strftime("%H-%M")
     hour, min = currTime.split("-")
     if int(hour) == 4:# and min == 36:
         gmc_send()
-    return flask.render_template('homepage.html')
+    return flask.render_template('login.html')
+
+@app.route('/chat')
+def chat():
+    return flask.render_template('chat.html')
 
 
 @app.route('/message', methods=['GET'])

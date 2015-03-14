@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <style type="text/css">
+      .commentArea {
+          font: 14px Arial;
+          padding: 0 10px;
+          margin-top: 20px;    
+      }
+
+      .bubbledLeft,.bubbledRight {
+          margin-top: 20px;
+          padding: 5px 9px;
+          max-width: 50%;
+          clear: both;
+          position: relative;
+      }
+
+      .bubbledLeft{
+          float: left;
+          margin-right: auto;
+          -webkit-border-radius: 8px 8px 8px 0px;
+          -moz-border-radius: 8px 8px 8px 0px;
+          -o-border-radius: 8px 8px 8px 0px;
+          -ms-border-radius: 8px 8px 8px 0px;
+          border-radius: 8px 8px 8px 0px;
+          background-color: #65B045;
+          color: #ffffff;
+      }
+
+      .bubbledLeft:before {
+          border-bottom: 10px solid #65B045;
+          border-left: 9px solid rgba(0, 0, 0, 0);
+          position: absolute;
+          bottom: 0;
+          left: -8px;
+          content: "";
+      }
+
+      .bubbledRight{
+          float: right;
+          margin-left: auto;
+          text-align: right;
+          -webkit-border-radius: 8px 8px 0px 8px;
+          -moz-border-radius: 8px 8px 0px 8px;
+          -o-border-radius: 8px 8px 0px 8px;
+          -ms-border-radius: 8px 8px 0px 8px;
+          border-radius: 8px 8px 0px 8px;
+          background-color: #07D;
+          color: white;
+      }
+
+      .bubbledRight:before {
+          border-bottom: 9px solid #07D;
+          border-right: 9px solid rgba(0, 0, 0, 0);
+          position: absolute;
+          bottom: 0;
+          right: -8px;
+          content: "";
+      }
+
+
+    </style>
+</head>
+<body>
+
+  <div class="commentArea">
+      <div class="bubbledRight">
+          Error dicunt theophrastus cu qui. Ad eos simul possit option, adipisci principes sed at. Detracto adolescens pro ea, duo no
+      </div>
+      <div class="bubbledLeft">
+          Lorem ipsum dolor sit amet, ea oblique constituam signiferumque eam. Pri adipisci maluisset te.
+      </div>
+  </div>   
+
+  <button id="send"></button>
+  <input id="msg">
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="static/js/script.js"></script>
+</html>
