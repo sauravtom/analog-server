@@ -16,7 +16,7 @@ $("#msg").keyup(function (e) {
         console.log(msg);
         $(".commentArea").append( "<div class='bubbledRight'>"+msg+"</div>" );
 
-        var min = 1, max = 3;
+        var min = 2, max = 4;
         var delay = Math.floor(Math.random() * (max - min) + min) * 1000;
         var dots="";
         setTimeout(
@@ -33,7 +33,7 @@ $("#msg").keyup(function (e) {
           }, delay);
 
         dots="";
-        var min = 3, max = 8;
+        var min = 4, max = 15;
         var delay = Math.floor(Math.random() * (max - min) + min) * 1000;
         setTimeout(
           function() {
