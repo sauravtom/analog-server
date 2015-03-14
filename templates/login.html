@@ -3,10 +3,76 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
-</head>
-<body background="welcome_bg.png">
+    <link rel="stylesheet" href="../static/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="../static/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../static/css/bootstrap-theme.css.map">
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/css/bootstrap.css.map">
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <style>
+        .displayed {
+        color: white;
+        border-radius: 1em;
+        padding: 1em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%) }
 
-<a href="/login/facebook">click here</a>
+        .textDisplay {
+        font: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+            font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+        color: black;
+        border-radius: 1em;
+        padding: 1em;
+        position: absolute;
+        top: 62%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%) }
+
+        .navbar {
+   background-color: transparent;
+   background: transparent;
+}
+
+.navbar li { color: #000 }
+
+    </style>
+
+</head>
+<body background="../static/img/welcome_bg.png" style="background-size: cover; background-repeat: no-repeat">
+<div class="navbar transparent navbar-inverse navbar-static-top hr">
+    <div class="navbar-brand logo"></div>
+    <div class="navbar-brand-right">
+    </div>
+    <div class="container">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav mineul" style="font-size:17px;margin-top:9px; color:white;margin-left: 45%;">
+              <li style="font-size: 26"><b>ANALOG</b></li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<div style=" margin-top: 5%; font-size: 40px"><p align="center"><b>Welcome to Analog</b></p></div>
+<div style="font-size: 20px"><p align="center"><b>your personal life-log assistant</b></p></div>
+<div ><p align="center"><b>Login Into the app from here</b></p></div>
+<div style="">
+    <a href="/login/facebook"><img class="displayed" src="../static/img/facebook.png" width="120px" height="120px"> </a><br>
+    <div class="textDisplay"><b>LOGIN</b></div>
+</div>
 
 </body>
 </html>
