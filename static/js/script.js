@@ -1,7 +1,7 @@
 
 
-string_ = "Hey how has been your day so far :). ! How are you feeling right now. ! I am bored, talk to me please :/!\
-What has been the most significant thing that happened to you today ? ! Type a message to talk to me.".split('!');
+string_ = "Hey how has been your day so far :). ! How are you feeling right now. !\
+What has been the most significant thing that happened to you today ?".split('!');
 
 window.setInterval(function(){
 			  var dots="";

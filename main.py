@@ -89,6 +89,7 @@ def message_input():
     msg = request.args.get('msg')
     if len(msg)<3:
         return "??"
+        
     return sentiment(msg)
 
 @app.route('/logout')
